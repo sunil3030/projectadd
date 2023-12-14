@@ -99,13 +99,16 @@ nav input::placeholder{
 }
 
 nav input:checked~.btns{
-    /* left: 0; */
+    left: 0;
 }
 nav a{
     text-decoration: none;
 }
 nav .fa-bars{
     font-size: 25px;
+}
+nav .fa-bars:hover{
+    cursor:pointer;
 }
 nav #box,nav .fa-bars{
     display: none;
@@ -125,18 +128,16 @@ nav #box,nav .fa-bars{
         display: inline;
     }
    
-    
-    
-   
-    nav .btns{
+    nav input:checked~.btns{
         flex-direction: column;
         position: fixed;
         top:119px;
         background-color:darkkhaki;
-        left: 0;
+        /* left:0; */
         width: 100%;
         text-align: center;
         padding: 50px;
+        z-index: 999;
     }
     nav .fontsize{
         /* background-color: red; */
