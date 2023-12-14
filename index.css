@@ -52,6 +52,9 @@ nav{
     width: 100%;
 }
 
+nav .btns{
+    transition: all 2s;
+}
 .fontsize{
     font-size: 30px;
     font-weight: bold;
@@ -99,7 +102,7 @@ nav input::placeholder{
 }
 
 nav input:checked~.btns{
-    left: 0;
+    left:0;
 }
 nav a{
     text-decoration: none;
@@ -118,24 +121,29 @@ nav #box,nav .fa-bars{
 
 @media screen and (max-width:1350px) {
  
-    nav .btns .btn{
+    nav .btns .btn{ 
         display: block;
         border: none;
         padding: 20px;
 
+    } 
+    nav input{
+        transition: none;
     }
+    
     nav .fa-bars{
         display: inline;
     }
    
-    nav input:checked~.btns{
+    nav .btns{
         flex-direction: column;
+        
         position: fixed;
         top:119px;
         background-color:darkkhaki;
-        /* left:0; */
-        width: 100%;
-        text-align: center;
+        left:-100%;
+        width: 300px;
+        height: 90vh;
         padding: 50px;
         z-index: 999;
     }
@@ -165,7 +173,7 @@ nav #box,nav .fa-bars{
 
 @media screen and (max-width:356px) {
     nav .btns{
-        top:125px
+        top:129px
     }
     
 }
